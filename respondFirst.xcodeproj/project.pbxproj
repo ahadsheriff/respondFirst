@@ -131,6 +131,11 @@
 					7B4EDBDF2082721600490723 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -361,7 +366,7 @@
 				DEVELOPMENT_TEAM = Y7U97B3W7V;
 				INFOPLIST_FILE = respondFirst/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ahadsheriff.respondFirst;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahadsheriff.respondFirst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,7 +382,7 @@
 				DEVELOPMENT_TEAM = Y7U97B3W7V;
 				INFOPLIST_FILE = respondFirst/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ahadsheriff.respondFirst;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahadsheriff.respondFirst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

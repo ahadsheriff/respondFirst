@@ -7,9 +7,12 @@
 
 import UIKit
 import Firebase
-import SwiftyJSON
+import CoreLocation
 
-class HelpMapViewController: UIViewController {
+class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var locationManager = CLLocationManager()
+    var locValue = CLLocationCoordinate2D()
     
     var uid = "greta"
     var ref: DatabaseReference = Database.database().reference()
@@ -18,7 +21,19 @@ class HelpMapViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        write()
+        locationManager.delegate = self
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,13 +43,30 @@ class HelpMapViewController: UIViewController {
     
     @IBAction func sendForHelp(_ sender: Any) {
         print("Hello")
-        write()
+        self.ref.child("users").setValue(["username": uid, "coordinate": locValue])
     }
     
-    func write() {
-        self.ref.child("users").setValue(["username": uid])
-
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let loc: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        //print("locations = \(loc.latitude) \(loc.longitude)")
+        locValue = loc;
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error while updating location " + error.localizedDescription)
+    }
+    
+    func createLocation(manager: CLLocationManager) {
+        //let location:CLLocation = (manager.location)!
+        if(manager.location == nil) {
+            print("Sorry")
+        }else {
+
+        
+        }
+        //Do What ever you want with it
+    }
+    
     
     /*
     // MARK: - Navigation

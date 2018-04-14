@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>400664853208-217m7e569miuue15ss2nm040dinimkvc.apps.googleusercontent.com</string>
+	<string>400664853208-j7esbfhbvqq9rn6rk41d2bk1pom1d5ib.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.400664853208-217m7e569miuue15ss2nm040dinimkvc</string>
+	<string>com.googleusercontent.apps.400664853208-j7esbfhbvqq9rn6rk41d2bk1pom1d5ib</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAavRvdYRY78Xn2rLMJRHMgvwElShRrsXo</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ahadsheriff.respondFirst</string>
+	<string>com.ahadsheriff.respondFirst</string>
 	<key>PROJECT_ID</key>
 	<string>respondfirst-aaj</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:400664853208:ios:8d196778b43c9a3b</string>
+	<string>1:400664853208:ios:131b87c22e2e876d</string>
 	<key>DATABASE_URL</key>
 	<string>https://respondfirst-aaj.firebaseio.com</string>
 </dict>
