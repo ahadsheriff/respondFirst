@@ -44,6 +44,9 @@
                                 <state key="normal" title="Need Help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zkq-hV-hkj" kind="show" id="RDq-z5-r55"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,6 +64,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Help Map View Controller-->
+        <scene sceneID="i8Y-Rf-5Df">
+            <objects>
+                <viewController id="zkq-hV-hkj" customClass="HelpMapViewController" customModule="respondFirst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FpZ-sA-bfd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-LE-5fH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Where Are You?" id="YeI-Jr-pCv">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="bps-rU-x6L"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="yLY-2W-yTk">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="5CV-Nx-Rs2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-de-WVq">
+                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <color key="backgroundColor" red="0.89756023880000002" green="0.2486505359" blue="0.2235805243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="HcZ-q2-46r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <state key="normal" title="Send Help Here">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="2Sx-F4-mWv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CbG-de-WVq" firstAttribute="leading" secondItem="FpZ-sA-bfd" secondAttribute="leading" id="5F1-8g-r2i"/>
+                            <constraint firstItem="CbG-de-WVq" firstAttribute="bottom" secondItem="UyV-kl-zrF" secondAttribute="bottom" id="84e-Cf-RKG"/>
+                            <constraint firstItem="CbG-de-WVq" firstAttribute="trailing" secondItem="dwn-LE-5fH" secondAttribute="trailing" id="8qC-GM-GFX"/>
+                            <constraint firstItem="CbG-de-WVq" firstAttribute="leading" secondItem="dwn-LE-5fH" secondAttribute="leading" id="ISh-DF-bPR"/>
+                            <constraint firstAttribute="trailing" secondItem="CbG-de-WVq" secondAttribute="trailing" id="aoc-ag-NTe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UyV-kl-zrF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Br-vC-lEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="-589.65517241379314"/>
         </scene>
     </scenes>
 </document>

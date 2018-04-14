@@ -14,6 +14,7 @@
 		7B4EDBEB2082721600490723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4EDBEA2082721600490723 /* Assets.xcassets */; };
 		7B4EDBEE2082721600490723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4EDBEC2082721600490723 /* LaunchScreen.storyboard */; };
 		7B4EDBF62082769200490723 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4EDBF52082769200490723 /* GoogleService-Info.plist */; };
+		7B760B1D20828CE900BC4981 /* HelpMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B760B1C20828CE800BC4981 /* HelpMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7B4EDBED2082721600490723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B4EDBEF2082721600490723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B4EDBF52082769200490723 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B760B1C20828CE800BC4981 /* HelpMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				7B4EDBE32082721600490723 /* AppDelegate.swift */,
 				7B4EDBE52082721600490723 /* ViewController.swift */,
 				7B4EDBE72082721600490723 /* Main.storyboard */,
+				7B760B1C20828CE800BC4981 /* HelpMapViewController.swift */,
 				7B4EDBEA2082721600490723 /* Assets.xcassets */,
 				7B4EDBEC2082721600490723 /* LaunchScreen.storyboard */,
 				7B4EDBEF2082721600490723 /* Info.plist */,
@@ -208,6 +211,7 @@
 			files = (
 				7B4EDBE62082721600490723 /* ViewController.swift in Sources */,
 				7B4EDBE42082721600490723 /* AppDelegate.swift in Sources */,
+				7B760B1D20828CE900BC4981 /* HelpMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
