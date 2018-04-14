@@ -33,6 +33,9 @@
                                 <state key="normal" title="Trying To Help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MlS-FI-KHt" kind="show" animates="NO" id="lSO-4E-CVK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gay-pC-oDo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="336"/>
@@ -65,6 +68,56 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eGE-c4-XKi">
+            <objects>
+                <viewController id="MlS-FI-KHt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ea-z3-wNd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-gk-d11">
+                                <rect key="frame" x="164" y="318" width="49" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to be notified when somebody near you is overdosing and in need of help?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-Y2-HxM">
+                                <rect key="frame" x="47" y="115" width="280" height="195"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="71A-nh-Anu"/>
+                                    <constraint firstAttribute="height" constant="195" id="SyF-ID-WSd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9L2-B6-MYd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Alerts" id="nSZ-pZ-kNq">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hcN-Mw-BpC">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="Eev-4z-6eK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X4C-Y2-HxM" firstAttribute="centerX" secondItem="4ea-z3-wNd" secondAttribute="centerX" id="Eow-qy-aAY"/>
+                            <constraint firstItem="I1L-gk-d11" firstAttribute="centerX" secondItem="ZS9-FP-Wvz" secondAttribute="centerX" id="MDt-9A-YYA"/>
+                            <constraint firstItem="I1L-gk-d11" firstAttribute="top" secondItem="X4C-Y2-HxM" secondAttribute="bottom" constant="8" id="MGR-sm-tS8"/>
+                            <constraint firstItem="I1L-gk-d11" firstAttribute="centerY" secondItem="ZS9-FP-Wvz" secondAttribute="centerY" constant="-10" id="Qdp-Ut-OI9"/>
+                            <constraint firstItem="X4C-Y2-HxM" firstAttribute="top" secondItem="ZS9-FP-Wvz" secondAttribute="top" constant="95" id="qSf-29-Iyx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZS9-FP-Wvz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eH5-ET-81N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165.5999999999999" y="493.40329835082463"/>
+        </scene>
         <!--Help Map View Controller-->
         <scene sceneID="i8Y-Rf-5Df">
             <objects>
@@ -73,7 +126,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-LE-5fH">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-LE-5fH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Where Are You?" id="YeI-Jr-pCv">
@@ -101,21 +154,39 @@
                                     <segue destination="Vwp-bH-xTH" kind="show" animates="NO" id="mvq-mX-7gg"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-AD-ouI">
+                                <rect key="frame" x="0.0" y="44" width="375" height="533"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="533" id="zPR-uW-gHb"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="📍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxP-R4-t3Q">
+                                <rect key="frame" x="175" y="321" width="25" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CbG-de-WVq" firstAttribute="leading" secondItem="FpZ-sA-bfd" secondAttribute="leading" id="5F1-8g-r2i"/>
+                            <constraint firstItem="ePr-AD-ouI" firstAttribute="trailing" secondItem="dwn-LE-5fH" secondAttribute="trailing" id="7ei-BN-cFg"/>
                             <constraint firstItem="CbG-de-WVq" firstAttribute="bottom" secondItem="UyV-kl-zrF" secondAttribute="bottom" id="84e-Cf-RKG"/>
                             <constraint firstItem="CbG-de-WVq" firstAttribute="trailing" secondItem="dwn-LE-5fH" secondAttribute="trailing" id="8qC-GM-GFX"/>
+                            <constraint firstItem="oxP-R4-t3Q" firstAttribute="centerX" secondItem="ePr-AD-ouI" secondAttribute="centerX" id="Akj-G8-dIt"/>
+                            <constraint firstItem="CbG-de-WVq" firstAttribute="top" secondItem="ePr-AD-ouI" secondAttribute="bottom" id="CM4-nY-bG5"/>
                             <constraint firstItem="CbG-de-WVq" firstAttribute="leading" secondItem="dwn-LE-5fH" secondAttribute="leading" id="ISh-DF-bPR"/>
+                            <constraint firstItem="ePr-AD-ouI" firstAttribute="top" secondItem="dwn-LE-5fH" secondAttribute="bottom" id="L5b-fS-Fu7"/>
+                            <constraint firstItem="oxP-R4-t3Q" firstAttribute="centerY" secondItem="ePr-AD-ouI" secondAttribute="centerY" constant="23" id="WVe-XO-23w"/>
                             <constraint firstAttribute="trailing" secondItem="CbG-de-WVq" secondAttribute="trailing" id="aoc-ag-NTe"/>
+                            <constraint firstItem="ePr-AD-ouI" firstAttribute="leading" secondItem="dwn-LE-5fH" secondAttribute="leading" id="kNm-Xs-Yqb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UyV-kl-zrF"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Br-vC-lEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-589.65517241379314"/>
+            <point key="canvasLocation" x="1165.5999999999999" y="-591.45427286356824"/>
         </scene>
         <!--Help Status View Controller-->
         <scene sceneID="SHg-hV-Flv">
@@ -164,7 +235,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mvq-mX-7gg"/>
-        <segue reference="h0e-Me-K5x"/>
+        <segue reference="RDq-z5-r55"/>
+        <segue reference="5CV-Nx-Rs2"/>
     </inferredMetricsTieBreakers>
 </document>
