@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import Firebase
+import SwiftyJSON
 
 class HelpMapViewController: UIViewController {
+    
+    var uid = "greta"
+    var ref: DatabaseReference = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        write()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +28,12 @@ class HelpMapViewController: UIViewController {
     
     @IBAction func sendForHelp(_ sender: Any) {
         print("Hello")
+        write()
+    }
+    
+    func write() {
+        self.ref.child("users").setValue(["username": uid])
+
     }
     
     /*
