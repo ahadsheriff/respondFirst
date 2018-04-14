@@ -45,7 +45,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zkq-hV-hkj" kind="show" id="RDq-z5-r55"/>
+                                    <segue destination="zkq-hV-hkj" kind="show" animates="NO" id="RDq-z5-r55"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,7 +80,7 @@
                                         <barButtonItem key="backBarButtonItem" title="Back" id="bps-rU-x6L"/>
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="yLY-2W-yTk">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="5CV-Nx-Rs2"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="5CV-Nx-Rs2"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -98,6 +98,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="2Sx-F4-mWv"/>
+                                    <segue destination="Vwp-bH-xTH" kind="show" animates="NO" id="mvq-mX-7gg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,5 +117,54 @@
             </objects>
             <point key="canvasLocation" x="1188" y="-589.65517241379314"/>
         </scene>
+        <!--Help Status View Controller-->
+        <scene sceneID="SHg-hV-Flv">
+            <objects>
+                <viewController id="Vwp-bH-xTH" customClass="HelpStatusViewController" customModule="respondFirst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yV6-kQ-bLM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-41-zgP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Help Status" id="z1K-Px-7uG"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSu-PD-izF">
+                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <color key="backgroundColor" red="0.89756023880000002" green="0.2486505359" blue="0.2235805243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="zcw-ZB-YCA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="v87-S5-vPm"/>
+                                    <segue destination="zkq-hV-hkj" kind="show" animates="NO" id="h0e-Me-K5x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bSu-PD-izF" firstAttribute="bottom" secondItem="nOq-9k-IIa" secondAttribute="bottom" id="2tL-AB-QSh"/>
+                            <constraint firstAttribute="trailing" secondItem="bSu-PD-izF" secondAttribute="trailing" id="5cO-Ba-h1h"/>
+                            <constraint firstItem="bSu-PD-izF" firstAttribute="leading" secondItem="Ivi-41-zgP" secondAttribute="leading" id="HIW-LD-pe5"/>
+                            <constraint firstItem="bSu-PD-izF" firstAttribute="trailing" secondItem="Ivi-41-zgP" secondAttribute="trailing" id="SKi-UR-bIR"/>
+                            <constraint firstItem="bSu-PD-izF" firstAttribute="leading" secondItem="yV6-kQ-bLM" secondAttribute="leading" id="Skt-dG-Mt1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nOq-9k-IIa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAE-yu-cnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2343" y="-590"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mvq-mX-7gg"/>
+        <segue reference="h0e-Me-K5x"/>
+    </inferredMetricsTieBreakers>
 </document>
