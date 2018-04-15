@@ -20,19 +20,17 @@ class SaveReportViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func yesFinish(_ sender: Any) {
-        print("Yes daddy")
+    @IBAction func yesDone(_ sender: Any) {
+        print("Yes daddy.")
     }
     
-    @IBAction func cancelFinish(_ sender: Any) {
-        print("Nah cancel that bro")
+    @IBAction func cancelDone(_ sender: Any) {
+        print("cancelling")
     }
     
-    @IBAction func noCall(_ sender: Any) {
-        print("Supernaw")
+    @IBAction func callDone(_ sender: Any) {
+        print("supernaw")
     }
-    
-    
     
     /*
     // MARK: - Navigation

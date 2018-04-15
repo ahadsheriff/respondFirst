@@ -18,8 +18,8 @@ class SaveMapViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         
         // 2.
-        let sourceLocation = CLLocationCoordinate2D(latitude: 40.759011, longitude: -73.984472)
-        let destinationLocation = CLLocationCoordinate2D(latitude: 40.748441, longitude: -73.985564)
+        let sourceLocation = CLLocationCoordinate2D(latitude: 40.809062, longitude: -73.959952)
+        let destinationLocation = CLLocationCoordinate2D(latitude: 40.7589, longitude: -73.9851)
         
         // 3.
         let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
@@ -31,7 +31,6 @@ class SaveMapViewController: UIViewController, MKMapViewDelegate {
         
         // 5.
         let sourceAnnotation = MKPointAnnotation()
-        sourceAnnotation.title = "Times Square"
         
         if let location = sourcePlacemark.location {
             sourceAnnotation.coordinate = location.coordinate
@@ -39,7 +38,6 @@ class SaveMapViewController: UIViewController, MKMapViewDelegate {
         
         
         let destinationAnnotation = MKPointAnnotation()
-        destinationAnnotation.title = "Empire State Building"
         
         if let location = destinationPlacemark.location {
             destinationAnnotation.coordinate = location.coordinate
@@ -92,7 +90,7 @@ class SaveMapViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func openMap(_ sender: Any) {
-        let url:URL! = URL(string : "http://maps.apple.com/maps?daddr=\(37.7694),\(122.4862)")
+        let url:URL! = URL(string : "http://maps.apple.com/maps?daddr=\(40.748441),\(-73.985564)")
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 
