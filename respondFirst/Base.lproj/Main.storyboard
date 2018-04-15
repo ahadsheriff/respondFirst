@@ -263,6 +263,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
                                 <state key="normal" title="ℹ"/>
+                                <connections>
+                                    <segue destination="eRg-hU-abE" kind="show" animates="NO" id="agT-w0-0wf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -287,7 +290,121 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH5-ET-81N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.217391304348" y="493.20652173913049"/>
+            <point key="canvasLocation" x="1274" y="444"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EzE-vf-HVh">
+            <objects>
+                <viewController id="eRg-hU-abE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sLM-eZ-bqy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFD-S0-pMc">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Resources" id="C0y-7T-h0P"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sK-Ra-Fwf">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="WtN-sJ-DAb">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="6Er-xa-dvS">
+                                            <connections>
+                                                <segue destination="MlS-FI-KHt" kind="show" animates="NO" id="2BZ-Ow-vLA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tH1-jY-oUg">
+                                <rect key="frame" x="334" y="122" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn more about Naloxone and the Opiod epidemic with the links below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-U4-8O7">
+                                <rect key="frame" x="69" y="64" width="276" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="KVu-Ru-sQA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recognizing Opioid Overdose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDU-MX-YBO">
+                                <rect key="frame" x="77" y="300" width="261" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Administering Naloxone " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-vv-hfe">
+                                <rect key="frame" x="93" y="453" width="228" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Overdose Prevention" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaW-LB-bPi">
+                                <rect key="frame" x="106" y="528" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebt-M3-ofG">
+                                <rect key="frame" x="0.0" y="646" width="414" height="90"/>
+                                <color key="backgroundColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="O07-PH-WzH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <state key="normal" title="Donate Online">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="PLQ-Av-p5q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responding to Opioid Overdose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycr-kQ-GVp">
+                                <rect key="frame" x="73" y="383" width="268" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oKC-g2-1WH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="IaW-LB-bPi" secondAttribute="centerX" id="2im-qR-JHh"/>
+                            <constraint firstItem="ebt-M3-ofG" firstAttribute="leading" secondItem="wFD-S0-pMc" secondAttribute="leading" id="BN4-td-qsR"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="sLM-eZ-bqy" secondAttribute="centerX" id="D2X-dd-vow"/>
+                            <constraint firstItem="Ycr-kQ-GVp" firstAttribute="trailing" secondItem="GDU-MX-YBO" secondAttribute="trailing" constant="3" id="INm-mA-AaQ"/>
+                            <constraint firstItem="ebt-M3-ofG" firstAttribute="leading" secondItem="sLM-eZ-bqy" secondAttribute="leading" id="SLb-ZF-aTl"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="top" secondItem="sLM-eZ-bqy" secondAttribute="top" constant="64" id="ShM-BS-Q80"/>
+                            <constraint firstItem="GDU-MX-YBO" firstAttribute="top" secondItem="b0q-U4-8O7" secondAttribute="bottom" constant="-2" id="T1H-ST-2WZ"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="Fgz-vv-hfe" secondAttribute="centerX" id="TEd-89-2js"/>
+                            <constraint firstItem="ebt-M3-ofG" firstAttribute="trailing" secondItem="wFD-S0-pMc" secondAttribute="trailing" id="V9t-XJ-iwf"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="top" secondItem="wFD-S0-pMc" secondAttribute="bottom" id="YPU-Vl-UQ9"/>
+                            <constraint firstItem="Fgz-vv-hfe" firstAttribute="top" secondItem="Ycr-kQ-GVp" secondAttribute="bottom" constant="49" id="ccn-fD-Doz"/>
+                            <constraint firstItem="ebt-M3-ofG" firstAttribute="bottom" secondItem="3Vx-gf-Glc" secondAttribute="bottom" id="d9g-DU-cRr"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="Ycr-kQ-GVp" secondAttribute="centerX" id="hrM-aN-JUC"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="GDU-MX-YBO" secondAttribute="centerX" constant="-0.5" id="hyX-PX-DMy"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="8sK-Ra-Fwf" secondAttribute="centerX" id="iam-Ci-UUv"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="wFD-S0-pMc" secondAttribute="centerX" id="l9F-Dr-KCS"/>
+                            <constraint firstItem="Ycr-kQ-GVp" firstAttribute="top" secondItem="GDU-MX-YBO" secondAttribute="bottom" constant="59" id="uEp-Zv-vro"/>
+                            <constraint firstItem="b0q-U4-8O7" firstAttribute="leading" secondItem="3Vx-gf-Glc" secondAttribute="leading" constant="69" id="wWb-m5-c3D"/>
+                            <constraint firstItem="ebt-M3-ofG" firstAttribute="leading" secondItem="8sK-Ra-Fwf" secondAttribute="leading" id="wXu-NT-OFb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Vx-gf-Glc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Fz-Uz-jMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369.5652173913045" y="442.66304347826093"/>
         </scene>
         <!--Help Map View Controller-->
         <scene sceneID="i8Y-Rf-5Df">
@@ -419,8 +536,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="khN-rH-eHK"/>
-        <segue reference="iJc-5O-Xr5"/>
-        <segue reference="Eev-4z-6eK"/>
+        <segue reference="2BZ-Ow-vLA"/>
+        <segue reference="l1w-e9-zaB"/>
     </inferredMetricsTieBreakers>
 </document>
