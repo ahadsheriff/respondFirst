@@ -14,8 +14,10 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var senderID: String! = ""
     var locationManager = CLLocationManager()
     var locValue = CLLocationCoordinate2D()
+    //boolean = false
     
     var uid = "greta"
     var ref: DatabaseReference = Database.database().reference()
@@ -62,6 +64,7 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
         print("Hello")
         self.ref.child("users").setValue(["username": uid, "longtitude": locValue.longitude, "latitude": locValue.latitude])
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error while updating location " + error.localizedDescription)

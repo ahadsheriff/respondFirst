@@ -7,6 +7,7 @@ target 'respondFirst' do
 
   # Pods for respondFirst
 	pod 'Firebase/Core'
-    	pod 'Firebase/Database'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
 	pod 'SwiftyJSON'
 end
