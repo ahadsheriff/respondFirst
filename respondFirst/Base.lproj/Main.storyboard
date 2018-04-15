@@ -138,6 +138,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBl-Je-lvC">
+                                <rect key="frame" x="0.0" y="467" width="414" height="90"/>
+                                <color key="backgroundColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="1mO-cC-SNd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="yesFinish:" destination="uGo-sG-fKW" eventType="touchUpInside" id="tuL-7w-kLl"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="fRB-00-kxE"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PK-rf-bjm">
                                 <rect key="frame" x="0.0" y="556" width="414" height="90"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,9 +164,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="hqN-ow-xyv"/>
-                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="qPA-Cg-Btf"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="BeH-9I-OHn"/>
+                                    <action selector="cancelFinish:" destination="uGo-sG-fKW" eventType="touchUpInside" id="jIu-6w-hbo"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="JeM-wu-3QJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-QV-kAd">
@@ -165,26 +179,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="3ua-Jf-njV"/>
-                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="g19-2I-uo8"/>
+                                    <action selector="noCall:" destination="uGo-sG-fKW" eventType="touchUpInside" id="QXQ-4g-Sey"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBl-Je-lvC">
-                                <rect key="frame" x="0.0" y="467" width="414" height="90"/>
-                                <color key="backgroundColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you successfully helped the individual in need?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvO-89-AmJ">
+                                <rect key="frame" x="67" y="171" width="280" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="1mO-cC-SNd"/>
+                                    <constraint firstAttribute="width" constant="280" id="GiK-rh-3Va"/>
+                                    <constraint firstAttribute="height" constant="195" id="RfL-9H-2Sf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="iOb-iy-QdS"/>
-                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="ULO-Rk-Tmo"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="Iw9-yT-ggg"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -196,12 +203,15 @@
                             <constraint firstItem="oBl-Je-lvC" firstAttribute="leading" secondItem="9PK-rf-bjm" secondAttribute="leading" id="KAM-OU-8Wb"/>
                             <constraint firstItem="MiM-QV-kAd" firstAttribute="top" secondItem="oBl-Je-lvC" secondAttribute="bottom" constant="89" id="awd-6z-w26"/>
                             <constraint firstItem="oBl-Je-lvC" firstAttribute="leading" secondItem="C5X-b9-PRj" secondAttribute="leading" id="pBL-Li-6rG"/>
+                            <constraint firstItem="PvO-89-AmJ" firstAttribute="centerX" secondItem="oBl-Je-lvC" secondAttribute="centerX" id="pZQ-d1-QtF"/>
+                            <constraint firstItem="PvO-89-AmJ" firstAttribute="top" secondItem="dnQ-UV-abp" secondAttribute="top" constant="151" id="v5x-y0-8Lj"/>
                             <constraint firstItem="oBl-Je-lvC" firstAttribute="trailing" secondItem="MiM-QV-kAd" secondAttribute="trailing" id="yIg-Xw-Z01"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dnQ-UV-abp"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PS5-Mr-eYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uGo-sG-fKW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1433" y="1375"/>
         </scene>
@@ -213,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-gk-d11">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-gk-d11">
                                 <rect key="frame" x="164" y="318" width="49" height="31"/>
                                 <connections>
                                     <action selector="switchToggled:" destination="MlS-FI-KHt" eventType="valueChanged" id="foZ-ue-Zfz"/>
@@ -334,6 +344,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-41-zgP">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Help Status" id="z1K-Px-7uG"/>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSu-PD-izF">
                                 <rect key="frame" x="0.0" y="646" width="414" height="90"/>
                                 <color key="backgroundColor" red="0.89756023880000002" green="0.2486505359" blue="0.2235805243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -349,22 +366,39 @@
                                     <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="sgu-Wx-b1t"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-41-zgP">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem title="Help Status" id="z1K-Px-7uG"/>
-                                </items>
-                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help is on it's way." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H0-kr-bic">
+                                <rect key="frame" x="67" y="64" width="280" height="195"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="5Bp-4e-zJc"/>
+                                    <constraint firstAttribute="width" constant="280" id="ZIf-cf-ITK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 people in the area have been notified." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-WF-p7w">
+                                <rect key="frame" x="67" y="271" width="280" height="195"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="RHa-Tk-1ZL"/>
+                                    <constraint firstAttribute="width" constant="280" id="mV2-8b-Lnk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bSu-PD-izF" firstAttribute="bottom" secondItem="nOq-9k-IIa" secondAttribute="bottom" id="2tL-AB-QSh"/>
+                            <constraint firstItem="6H0-kr-bic" firstAttribute="centerX" secondItem="Ivi-41-zgP" secondAttribute="centerX" id="3yr-A6-WPk"/>
+                            <constraint firstItem="6H0-kr-bic" firstAttribute="top" secondItem="Ivi-41-zgP" secondAttribute="bottom" id="58h-V8-BEi"/>
                             <constraint firstAttribute="trailing" secondItem="bSu-PD-izF" secondAttribute="trailing" id="5cO-Ba-h1h"/>
                             <constraint firstItem="bSu-PD-izF" firstAttribute="leading" secondItem="Ivi-41-zgP" secondAttribute="leading" id="HIW-LD-pe5"/>
                             <constraint firstItem="bSu-PD-izF" firstAttribute="trailing" secondItem="Ivi-41-zgP" secondAttribute="trailing" id="SKi-UR-bIR"/>
                             <constraint firstItem="bSu-PD-izF" firstAttribute="leading" secondItem="yV6-kQ-bLM" secondAttribute="leading" id="Skt-dG-Mt1"/>
                             <constraint firstItem="Ivi-41-zgP" firstAttribute="top" secondItem="nOq-9k-IIa" secondAttribute="top" id="Tpj-eP-DkR"/>
+                            <constraint firstItem="Qoo-WF-p7w" firstAttribute="centerY" secondItem="yV6-kQ-bLM" secondAttribute="centerY" id="W0c-cs-LqM"/>
+                            <constraint firstItem="Qoo-WF-p7w" firstAttribute="leading" secondItem="6H0-kr-bic" secondAttribute="leading" id="gsZ-nU-UdM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nOq-9k-IIa"/>
                     </view>
@@ -375,8 +409,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="khN-rH-eHK"/>
         <segue reference="iJc-5O-Xr5"/>
-        <segue reference="Eev-4z-6eK"/>
+        <segue reference="JeM-wu-3QJ"/>
     </inferredMetricsTieBreakers>
 </document>
