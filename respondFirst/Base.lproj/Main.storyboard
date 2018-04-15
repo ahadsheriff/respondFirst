@@ -212,6 +212,9 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-gk-d11">
                                 <rect key="frame" x="164" y="318" width="49" height="31"/>
+                                <connections>
+                                    <action selector="switchToggled:" destination="MlS-FI-KHt" eventType="valueChanged" id="foZ-ue-Zfz"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to be notified when somebody near you is overdosing and in need of help?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-Y2-HxM">
                                 <rect key="frame" x="47" y="115" width="280" height="195"/>
@@ -252,6 +255,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZS9-FP-Wvz"/>
                     </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="I1L-gk-d11" id="cnl-9G-N0Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH5-ET-81N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,7 +383,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="khN-rH-eHK"/>
         <segue reference="iJc-5O-Xr5"/>
-        <segue reference="5CV-Nx-Rs2"/>
+        <segue reference="Eev-4z-6eK"/>
     </inferredMetricsTieBreakers>
 </document>
