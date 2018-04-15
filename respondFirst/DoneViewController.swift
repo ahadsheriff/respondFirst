@@ -20,7 +20,11 @@ class DoneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func callDone(_ sender: Any) {
+        guard let number = URL(string: "tel://" + "4256775891") else { return }
+        UIApplication.shared.open(number)
+    }
+    
     /*
     // MARK: - Navigation
 

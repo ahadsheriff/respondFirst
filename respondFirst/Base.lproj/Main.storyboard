@@ -128,16 +128,26 @@
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="1374.4565217391305"/>
         </scene>
-        <!--View Controller-->
+        <!--Done View Controller-->
         <scene sceneID="gJw-l5-FOZ">
             <objects>
-                <viewController id="ZHe-8n-tX2" sceneMemberID="viewController">
+                <viewController id="ZHe-8n-tX2" customClass="DoneViewController" customModule="respondFirst" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="44m-NN-k0C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the individual been taken care of?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVH-Ft-fum">
+                                <rect key="frame" x="67" y="167" width="280" height="195"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="Br9-sm-UFj"/>
+                                    <constraint firstAttribute="width" constant="280" id="oWg-SX-hRU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-gI-VSP">
-                                <rect key="frame" x="0.0" y="564" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="556" width="414" height="90"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="jZ3-Cl-aF0"/>
@@ -148,6 +158,7 @@
                                 </state>
                                 <connections>
                                     <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="6pk-MU-DQl"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kuC-Gm-DMB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-AV-ceI">
@@ -161,11 +172,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="callDone:" destination="ZHe-8n-tX2" eventType="touchUpInside" id="eXn-4Q-wod"/>
                                     <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="Lai-hz-2cP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-qe-Qvc">
-                                <rect key="frame" x="0.0" y="477" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="466" width="414" height="90"/>
                                 <color key="backgroundColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="7H6-ue-hcG"/>
@@ -176,27 +188,18 @@
                                 </state>
                                 <connections>
                                     <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="Ic0-OR-K4R"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="l1w-e9-zaB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has the individual been taken care of?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVH-Ft-fum">
-                                <rect key="frame" x="67" y="167" width="280" height="195"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="195" id="Br9-sm-UFj"/>
-                                    <constraint firstAttribute="width" constant="280" id="oWg-SX-hRU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qqa-qe-Qvc" firstAttribute="leading" secondItem="44m-NN-k0C" secondAttribute="leading" id="0cr-52-kkh"/>
                             <constraint firstItem="qqa-qe-Qvc" firstAttribute="centerX" secondItem="gVH-Ft-fum" secondAttribute="centerX" id="Bcu-9F-hrV"/>
-                            <constraint firstItem="8ef-AV-ceI" firstAttribute="top" secondItem="qqa-qe-Qvc" secondAttribute="bottom" constant="79" id="QOu-Zf-eDy"/>
-                            <constraint firstAttribute="bottom" secondItem="qqa-qe-Qvc" secondAttribute="bottom" constant="169" id="RSP-oQ-Dys"/>
+                            <constraint firstItem="8ef-AV-ceI" firstAttribute="top" secondItem="qqa-qe-Qvc" secondAttribute="bottom" constant="90" id="QOu-Zf-eDy"/>
+                            <constraint firstAttribute="bottom" secondItem="qqa-qe-Qvc" secondAttribute="bottom" constant="180" id="RSP-oQ-Dys"/>
                             <constraint firstItem="qqa-qe-Qvc" firstAttribute="trailing" secondItem="Nfs-gI-VSP" secondAttribute="trailing" id="WUe-si-mV3"/>
-                            <constraint firstItem="dCp-Js-sIE" firstAttribute="bottom" secondItem="Nfs-gI-VSP" secondAttribute="bottom" constant="82" id="a58-x5-X47"/>
+                            <constraint firstItem="dCp-Js-sIE" firstAttribute="bottom" secondItem="Nfs-gI-VSP" secondAttribute="bottom" constant="90" id="a58-x5-X47"/>
                             <constraint firstItem="qqa-qe-Qvc" firstAttribute="leading" secondItem="8ef-AV-ceI" secondAttribute="leading" id="bdg-az-o7b"/>
                             <constraint firstItem="qqa-qe-Qvc" firstAttribute="leading" secondItem="Nfs-gI-VSP" secondAttribute="leading" id="fVF-s3-eIf"/>
                             <constraint firstItem="gVH-Ft-fum" firstAttribute="top" secondItem="dCp-Js-sIE" secondAttribute="top" constant="147" id="k6P-OP-3p9"/>
@@ -371,7 +374,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 people in the area have been notified." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-WF-p7w">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An individual in the area has been notified. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-WF-p7w">
                                 <rect key="frame" x="67" y="271" width="280" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="RHa-Tk-1ZL"/>
@@ -405,6 +408,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iJc-5O-Xr5"/>
-        <segue reference="Eev-4z-6eK"/>
+        <segue reference="l1w-e9-zaB"/>
     </inferredMetricsTieBreakers>
 </document>
