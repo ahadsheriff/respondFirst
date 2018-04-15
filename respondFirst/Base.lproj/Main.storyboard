@@ -48,7 +48,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zkq-hV-hkj" kind="show" animates="NO" id="RDq-z5-r55"/>
+                                    <segue destination="zkq-hV-hkj" kind="show" animates="NO" id="IaQ-ge-zvB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -183,9 +183,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UyV-kl-zrF"/>
                     </view>
-                    <connections>
-                        <outlet property="mapView" destination="ePr-AD-ouI" id="IP5-L9-VQi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Br-vC-lEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +235,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RDq-z5-r55"/>
+        <segue reference="IaQ-ge-zvB"/>
         <segue reference="5CV-Nx-Rs2"/>
     </inferredMetricsTieBreakers>
 </document>
