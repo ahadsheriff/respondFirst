@@ -28,18 +28,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is HelpMapViewController
-        {
-            let vc = segue.destination as? HelpMapViewController
-            vc?.userID = userID
-        }
-    }*/
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(self.userID)
-        let controller = segue.destination as! HelpMapViewController
-        controller.senderID = self.userID
+        if segue.identifier == "needHelpSegue" {
+            print(self.userID)
+            let controller = segue.destination as! HelpMapViewController
+            controller.senderID = self.userID
+        }
+        else {
+            print(self.userID)
+            let controller = segue.destination as! SaveOptionsViewController
+            controller.senderID = self.userID
+        }
     }
     
     
