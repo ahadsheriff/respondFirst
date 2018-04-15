@@ -8,9 +8,11 @@
 import UIKit
 import FirebaseAuth.FIRAuth
 
+var id: String = ""
+
 class ViewController: UIViewController {
     
-    var userID: String = ""
+    var senderID: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,27 +20,17 @@ class ViewController: UIViewController {
         Auth.auth().signInAnonymously() { (user, error) in
             if let user = user {
                 print("User is signed in with uid: ", user.uid)
-                self.userID = user.uid
+                //UserID.senderID = user.uid
+                self.senderID = user.uid
+                id = user.uid
             }
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "needHelpSegue" {
-            print(self.userID)
-            let controller = segue.destination as! HelpMapViewController
-            controller.senderID = self.userID
-        }
-        else {
-            print(self.userID)
-            let controller = segue.destination as! SaveOptionsViewController
-            controller.senderID = self.userID
-        }
     }
     
     

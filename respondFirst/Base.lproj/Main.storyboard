@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -48,7 +43,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="anonAuth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDc-pC-P7j"/>
                                     <segue destination="zkq-hV-hkj" kind="show" identifier="needHelpSegue" animates="NO" id="IaQ-ge-zvB"/>
                                 </connections>
                             </button>
@@ -271,7 +265,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-LE-5fH">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-LE-5fH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Where Are You?" id="YeI-Jr-pCv">
@@ -295,12 +289,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="2Sx-F4-mWv"/>
                                     <segue destination="Vwp-bH-xTH" kind="show" animates="NO" id="mvq-mX-7gg"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ySh-x8-jhr">
-                                <rect key="frame" x="0.0" y="44" width="375" height="533"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ySh-x8-jhr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="📍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o7-G9-Mwh">
                                 <rect key="frame" x="170.5" y="321" width="34" height="25"/>
@@ -361,9 +354,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="U7F-Yq-HwV"/>
+=======
+                                    <action selector="cancel:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="4OA-ug-LEB"/>
+>>>>>>> delete db entry when cancel is clicked
                                     <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="v87-S5-vPm"/>
-                                    <segue destination="zkq-hV-hkj" kind="show" animates="NO" id="h0e-Me-K5x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -377,9 +373,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nOq-9k-IIa"/>
                     </view>
-                    <connections>
-                        <outlet property="cancelHelp" destination="bSu-PD-izF" id="Q4o-B2-A35"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAE-yu-cnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,8 +380,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="IaQ-ge-zvB"/>
         <segue reference="iJc-5O-Xr5"/>
         <segue reference="Eev-4z-6eK"/>
+=======
+        <segue reference="5CV-Nx-Rs2"/>
+>>>>>>> delete db entry when cancel is clicked
     </inferredMetricsTieBreakers>
 </document>

@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-import CoreLocation
+//import CoreLocation
 import MapKit
 
 class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
@@ -31,6 +31,7 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(id)
 
         // Do any additional setup after loading the view.
         locationManager.delegate = self
@@ -61,10 +62,9 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func sendForHelp(_ sender: Any) {
-        print("Hello")
         let timeStamp = Date()
         let flag = true;
-        self.ref.child(senderID).setValue(["active": flag, "timeStamp": String(describing: timeStamp), "longtitude": locValue.longitude, "latitude": locValue.latitude])
+        self.ref.child(id).setValue(["active": flag, "timeStamp": String(describing: timeStamp), "longtitude": locValue.longitude, "latitude": locValue.latitude])
     }
     
     
@@ -86,5 +86,11 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-    
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(self.senderID)
+        let controller = segue.destination as! HelpStatusViewController
+        controller.senderID = self.senderID
+    }
+    */
 }
