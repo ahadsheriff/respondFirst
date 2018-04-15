@@ -32,10 +32,8 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestLocation()
             locationManager.startUpdatingLocation()
         }
-        
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,7 +41,7 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func sendForHelp(_ sender: Any) {
         print("Hello")
-        self.ref.child("users").setValue(["username": uid, "coordinate": locValue])
+        self.ref.child("users").setValue(["username": uid, "longtitude": locValue.longitude, "latitude": locValue.latitude])
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -67,15 +65,4 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
         //Do What ever you want with it
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
