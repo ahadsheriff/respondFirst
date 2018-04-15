@@ -28,10 +28,11 @@ class HelpStatusViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func cancelHelp(_ sender: Any) {
         print("You're trying to cancel")
         self.ref.child(id).setValue(["active": false])
     }
+
     /*
     @IBAction func cancelHelp(_ sender: Any) {
         //let key = ref.child(self.senderID!)

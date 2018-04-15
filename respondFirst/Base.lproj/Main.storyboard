@@ -289,14 +289,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="YRn-VK-M5N"/>
                                     <segue destination="Vwp-bH-xTH" kind="show" animates="NO" id="mvq-mX-7gg"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ySh-x8-jhr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="📍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o7-G9-Mwh">
-                                <rect key="frame" x="170.5" y="321" width="34" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o7-G9-Mwh">
+                                <rect key="frame" x="170.5" y="270.5" width="34" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -354,12 +355,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-<<<<<<< HEAD
-                                    <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="U7F-Yq-HwV"/>
-=======
-                                    <action selector="cancel:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="4OA-ug-LEB"/>
->>>>>>> delete db entry when cancel is clicked
-                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="v87-S5-vPm"/>
+                                    <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="9NM-Ac-Bc0"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="sgu-Wx-b1t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -380,12 +377,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="IaQ-ge-zvB"/>
         <segue reference="iJc-5O-Xr5"/>
-        <segue reference="Eev-4z-6eK"/>
-=======
         <segue reference="5CV-Nx-Rs2"/>
->>>>>>> delete db entry when cancel is clicked
     </inferredMetricsTieBreakers>
 </document>
