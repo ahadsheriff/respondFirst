@@ -159,7 +159,7 @@
                                 </state>
                                 <connections>
                                     <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="6pk-MU-DQl"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="kuC-Gm-DMB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="kuC-Gm-DMB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-AV-ceI">
@@ -189,7 +189,7 @@
                                 </state>
                                 <connections>
                                     <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="Ic0-OR-K4R"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="l1w-e9-zaB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="l1w-e9-zaB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,28 +292,22 @@
             </objects>
             <point key="canvasLocation" x="1274" y="444"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="EzE-vf-HVh">
             <objects>
-                <viewController id="eRg-hU-abE" sceneMemberID="viewController">
+                <viewController id="eRg-hU-abE" customClass="InfoViewController" customModule="respondFirst" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLM-eZ-bqy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFD-S0-pMc">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Resources" id="C0y-7T-h0P"/>
-                                </items>
-                            </navigationBar>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sK-Ra-Fwf">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="WtN-sJ-DAb">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="6Er-xa-dvS">
+                                    <navigationItem title="Resources" id="C0y-7T-h0P">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="3Av-U4-e35">
                                             <connections>
-                                                <segue destination="MlS-FI-KHt" kind="show" animates="NO" id="2BZ-Ow-vLA"/>
+                                                <segue destination="MlS-FI-KHt" kind="show" animates="NO" id="LqB-ia-NDi"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -335,24 +329,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recognizing Opioid Overdose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDU-MX-YBO">
-                                <rect key="frame" x="77" y="300" width="261" height="24"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Administering Naloxone " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-vv-hfe">
-                                <rect key="frame" x="93" y="453" width="228" height="21"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Overdose Prevention" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaW-LB-bPi">
-                                <rect key="frame" x="106" y="528" width="202" height="21"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebt-M3-ofG">
                                 <rect key="frame" x="0.0" y="646" width="414" height="90"/>
                                 <color key="backgroundColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -364,40 +340,62 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="donate:" destination="eRg-hU-abE" eventType="touchUpInside" id="bF9-VM-sOo"/>
                                     <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="PLQ-Av-p5q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responding to Opioid Overdose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycr-kQ-GVp">
-                                <rect key="frame" x="73" y="383" width="268" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="oKC-g2-1WH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="et0-WC-5vl">
+                                <rect key="frame" x="79" y="284" width="259" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Recognizing Opioid Overdose"/>
+                                <connections>
+                                    <action selector="one:" destination="eRg-hU-abE" eventType="touchUpInside" id="90c-9G-gQd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJs-h5-peK">
+                                <rect key="frame" x="70" y="351" width="277" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Responding to Opioid Overdose"/>
+                                <connections>
+                                    <action selector="two:" destination="eRg-hU-abE" eventType="touchUpInside" id="aE0-aB-8xQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-5r-yBx">
+                                <rect key="frame" x="103" y="414" width="211" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Administering Naloxone "/>
+                                <connections>
+                                    <action selector="three:" destination="eRg-hU-abE" eventType="touchUpInside" id="SfN-sg-XMR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCl-3B-zsf">
+                                <rect key="frame" x="118" y="478" width="181" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Overdose Prevention"/>
+                                <connections>
+                                    <action selector="four:" destination="eRg-hU-abE" eventType="touchUpInside" id="mar-sc-SDa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="IaW-LB-bPi" secondAttribute="centerX" id="2im-qR-JHh"/>
+                            <constraint firstItem="et0-WC-5vl" firstAttribute="centerX" secondItem="Xh3-5r-yBx" secondAttribute="centerX" id="A6M-v6-B8Y"/>
                             <constraint firstItem="ebt-M3-ofG" firstAttribute="leading" secondItem="wFD-S0-pMc" secondAttribute="leading" id="BN4-td-qsR"/>
+                            <constraint firstItem="zJs-h5-peK" firstAttribute="top" secondItem="et0-WC-5vl" secondAttribute="bottom" constant="31" id="CTy-QG-oGR"/>
                             <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="sLM-eZ-bqy" secondAttribute="centerX" id="D2X-dd-vow"/>
-                            <constraint firstItem="Ycr-kQ-GVp" firstAttribute="trailing" secondItem="GDU-MX-YBO" secondAttribute="trailing" constant="3" id="INm-mA-AaQ"/>
+                            <constraint firstItem="et0-WC-5vl" firstAttribute="top" secondItem="sLM-eZ-bqy" secondAttribute="top" constant="284" id="KG6-Rx-cSk"/>
+                            <constraint firstItem="et0-WC-5vl" firstAttribute="leading" secondItem="3Vx-gf-Glc" secondAttribute="leading" constant="79" id="Ryg-uL-C06"/>
                             <constraint firstItem="ebt-M3-ofG" firstAttribute="leading" secondItem="sLM-eZ-bqy" secondAttribute="leading" id="SLb-ZF-aTl"/>
                             <constraint firstItem="b0q-U4-8O7" firstAttribute="top" secondItem="sLM-eZ-bqy" secondAttribute="top" constant="64" id="ShM-BS-Q80"/>
-                            <constraint firstItem="GDU-MX-YBO" firstAttribute="top" secondItem="b0q-U4-8O7" secondAttribute="bottom" constant="-2" id="T1H-ST-2WZ"/>
-                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="Fgz-vv-hfe" secondAttribute="centerX" id="TEd-89-2js"/>
                             <constraint firstItem="ebt-M3-ofG" firstAttribute="trailing" secondItem="wFD-S0-pMc" secondAttribute="trailing" id="V9t-XJ-iwf"/>
                             <constraint firstItem="b0q-U4-8O7" firstAttribute="top" secondItem="wFD-S0-pMc" secondAttribute="bottom" id="YPU-Vl-UQ9"/>
-                            <constraint firstItem="Fgz-vv-hfe" firstAttribute="top" secondItem="Ycr-kQ-GVp" secondAttribute="bottom" constant="49" id="ccn-fD-Doz"/>
+                            <constraint firstItem="et0-WC-5vl" firstAttribute="centerX" secondItem="yCl-3B-zsf" secondAttribute="centerX" id="Zhv-yL-TN5"/>
                             <constraint firstItem="ebt-M3-ofG" firstAttribute="bottom" secondItem="3Vx-gf-Glc" secondAttribute="bottom" id="d9g-DU-cRr"/>
-                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="Ycr-kQ-GVp" secondAttribute="centerX" id="hrM-aN-JUC"/>
-                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="GDU-MX-YBO" secondAttribute="centerX" constant="-0.5" id="hyX-PX-DMy"/>
-                            <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="8sK-Ra-Fwf" secondAttribute="centerX" id="iam-Ci-UUv"/>
+                            <constraint firstItem="Xh3-5r-yBx" firstAttribute="top" secondItem="zJs-h5-peK" secondAttribute="bottom" constant="27" id="h4f-XP-Tql"/>
                             <constraint firstItem="b0q-U4-8O7" firstAttribute="centerX" secondItem="wFD-S0-pMc" secondAttribute="centerX" id="l9F-Dr-KCS"/>
-                            <constraint firstItem="Ycr-kQ-GVp" firstAttribute="top" secondItem="GDU-MX-YBO" secondAttribute="bottom" constant="59" id="uEp-Zv-vro"/>
+                            <constraint firstItem="yCl-3B-zsf" firstAttribute="top" secondItem="Xh3-5r-yBx" secondAttribute="bottom" constant="28" id="oxE-cC-dWK"/>
+                            <constraint firstItem="et0-WC-5vl" firstAttribute="centerX" secondItem="zJs-h5-peK" secondAttribute="centerX" id="u4f-Ny-bg4"/>
                             <constraint firstItem="b0q-U4-8O7" firstAttribute="leading" secondItem="3Vx-gf-Glc" secondAttribute="leading" constant="69" id="wWb-m5-c3D"/>
-                            <constraint firstItem="ebt-M3-ofG" firstAttribute="leading" secondItem="8sK-Ra-Fwf" secondAttribute="leading" id="wXu-NT-OFb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Vx-gf-Glc"/>
                     </view>
@@ -536,7 +534,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2BZ-Ow-vLA"/>
-        <segue reference="l1w-e9-zaB"/>
+        <segue reference="LqB-ia-NDi"/>
+        <segue reference="Eev-4z-6eK"/>
     </inferredMetricsTieBreakers>
 </document>

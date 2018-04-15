@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5FC9CFC3707AB4756543773A /* Pods_respondFirst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0092F6A06294F438C180A9FF /* Pods_respondFirst.framework */; };
 		7B4C612D2083937C007419C4 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C612C2083937C007419C4 /* DoneViewController.swift */; };
+		7B4C612F20839CEB007419C4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C612E20839CEB007419C4 /* InfoViewController.swift */; };
 		7B4EDBE42082721600490723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4EDBE32082721600490723 /* AppDelegate.swift */; };
 		7B4EDBE62082721600490723 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4EDBE52082721600490723 /* ViewController.swift */; };
 		7B4EDBE92082721600490723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4EDBE72082721600490723 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		1FC91C7FEFE60325DC40BBA8 /* Pods-respondFirst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-respondFirst.debug.xcconfig"; path = "Pods/Target Support Files/Pods-respondFirst/Pods-respondFirst.debug.xcconfig"; sourceTree = "<group>"; };
 		265B01A5CA1F63FC588593ED /* Pods-respondFirst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-respondFirst.release.xcconfig"; path = "Pods/Target Support Files/Pods-respondFirst/Pods-respondFirst.release.xcconfig"; sourceTree = "<group>"; };
 		7B4C612C2083937C007419C4 /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		7B4C612E20839CEB007419C4 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		7B4EDBE02082721600490723 /* respondFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = respondFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4EDBE32082721600490723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B4EDBE52082721600490723 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				7B74CB462083197900147305 /* SaveOptionsViewController.swift */,
 				7B74CB442083116B00147305 /* SaveMapViewController.swift */,
 				7B4C612C2083937C007419C4 /* DoneViewController.swift */,
+				7B4C612E20839CEB007419C4 /* InfoViewController.swift */,
 				7B4EDBE72082721600490723 /* Main.storyboard */,
 				7B4EDBEA2082721600490723 /* Assets.xcassets */,
 				7B4EDBEC2082721600490723 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				7B74CB472083197900147305 /* SaveOptionsViewController.swift in Sources */,
 				7B74CB452083116B00147305 /* SaveMapViewController.swift in Sources */,
 				7B4EDBE42082721600490723 /* AppDelegate.swift in Sources */,
+				7B4C612F20839CEB007419C4 /* InfoViewController.swift in Sources */,
 				7B760B1D20828CE900BC4981 /* HelpMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
