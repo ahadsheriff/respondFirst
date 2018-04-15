@@ -1,5 +1,5 @@
 //
-//  SaveReportViewController.swift
+//  DoneViewController.swift
 //  respondFirst
 //
 //  Created by Ahad Sheriff on 4/15/18.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SaveReportViewController: UIViewController {
+class DoneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +20,7 @@ class SaveReportViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func yesDone(_ sender: Any) {
-        print("Yes daddy.")
-    }
-    
-    @IBAction func cancelDone(_ sender: Any) {
-        print("cancelling")
-    }
-    
-    @IBAction func callDone(_ sender: Any) {
-        print("supernaw")
-    }
-    
+
     /*
     // MARK: - Navigation
 

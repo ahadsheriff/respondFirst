@@ -82,10 +82,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelHelp:" destination="Vwp-bH-xTH" eventType="touchUpInside" id="yZ4-Oe-Zri"/>
-                                    <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="hya-eX-PLY"/>
-                                    <action selector="sendForHelp:" destination="zkq-hV-hkj" eventType="touchUpInside" id="U8r-Fb-PjJ"/>
-                                    <segue destination="UMH-3g-hrT" kind="show" id="Mog-g9-dh5"/>
+                                    <action selector="openMap:" destination="dge-9n-NGO" eventType="touchUpInside" id="QQt-dj-j1n"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NdN-Cw-HRo">
@@ -129,97 +126,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXM-g1-v5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="1374.4565217391305"/>
-        </scene>
-        <!--Save Report View Controller-->
-        <scene sceneID="Ie7-1h-fDY">
-            <objects>
-                <viewController id="UMH-3g-hrT" customClass="SaveReportViewController" customModule="respondFirst" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C5X-b9-PRj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBl-Je-lvC">
-                                <rect key="frame" x="0.0" y="467" width="414" height="90"/>
-                                <color key="backgroundColor" red="0.021180555560000001" green="0.3170019744" blue="0.66119791670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="1mO-cC-SNd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="yesDone:" destination="UMH-3g-hrT" eventType="touchUpInside" id="HdJ-yL-PG1"/>
-                                    <action selector="yesFinish:" destination="uGo-sG-fKW" eventType="touchUpInside" id="tuL-7w-kLl"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="fRB-00-kxE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PK-rf-bjm">
-                                <rect key="frame" x="0.0" y="556" width="414" height="90"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="vfM-0B-igd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelDone:" destination="UMH-3g-hrT" eventType="touchUpInside" id="aHb-o6-awF"/>
-                                    <action selector="cancelFinish:" destination="uGo-sG-fKW" eventType="touchUpInside" id="jIu-6w-hbo"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="JeM-wu-3QJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-QV-kAd">
-                                <rect key="frame" x="0.0" y="646" width="414" height="90"/>
-                                <color key="backgroundColor" red="0.89756023880000002" green="0.2486505359" blue="0.2235805243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="pKc-SY-cLn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="No (Call 911)">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="callDone:" destination="UMH-3g-hrT" eventType="touchUpInside" id="oie-in-ysA"/>
-                                    <action selector="noCall:" destination="uGo-sG-fKW" eventType="touchUpInside" id="QXQ-4g-Sey"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you successfully helped the individual in need?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvO-89-AmJ">
-                                <rect key="frame" x="67" y="171" width="280" height="195"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="GiK-rh-3Va"/>
-                                    <constraint firstAttribute="height" constant="195" id="RfL-9H-2Sf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oBl-Je-lvC" secondAttribute="trailing" id="49Q-2m-sfq"/>
-                            <constraint firstItem="9PK-rf-bjm" firstAttribute="top" secondItem="dnQ-UV-abp" secondAttribute="top" constant="536" id="4f9-7Y-4oX"/>
-                            <constraint firstItem="oBl-Je-lvC" firstAttribute="top" secondItem="dnQ-UV-abp" secondAttribute="top" constant="447" id="9Tb-b2-fuZ"/>
-                            <constraint firstItem="oBl-Je-lvC" firstAttribute="leading" secondItem="MiM-QV-kAd" secondAttribute="leading" id="DG1-7f-fAP"/>
-                            <constraint firstItem="oBl-Je-lvC" firstAttribute="trailing" secondItem="9PK-rf-bjm" secondAttribute="trailing" id="HeZ-ee-cB5"/>
-                            <constraint firstItem="oBl-Je-lvC" firstAttribute="leading" secondItem="9PK-rf-bjm" secondAttribute="leading" id="KAM-OU-8Wb"/>
-                            <constraint firstItem="MiM-QV-kAd" firstAttribute="top" secondItem="oBl-Je-lvC" secondAttribute="bottom" constant="89" id="awd-6z-w26"/>
-                            <constraint firstItem="oBl-Je-lvC" firstAttribute="leading" secondItem="C5X-b9-PRj" secondAttribute="leading" id="pBL-Li-6rG"/>
-                            <constraint firstItem="PvO-89-AmJ" firstAttribute="centerX" secondItem="oBl-Je-lvC" secondAttribute="centerX" id="pZQ-d1-QtF"/>
-                            <constraint firstItem="PvO-89-AmJ" firstAttribute="top" secondItem="dnQ-UV-abp" secondAttribute="top" constant="151" id="v5x-y0-8Lj"/>
-                            <constraint firstItem="oBl-Je-lvC" firstAttribute="trailing" secondItem="MiM-QV-kAd" secondAttribute="trailing" id="yIg-Xw-Z01"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="dnQ-UV-abp"/>
-                    </view>
-                    <connections>
-                        <outlet property="cancelDone" destination="9PK-rf-bjm" id="Gju-vu-FjW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PS5-Mr-eYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="uGo-sG-fKW" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1433" y="1375"/>
         </scene>
         <!--Save Options View Controller-->
         <scene sceneID="eGE-c4-XKi">
@@ -416,6 +322,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iJc-5O-Xr5"/>
-        <segue reference="JeM-wu-3QJ"/>
+        <segue reference="Eev-4z-6eK"/>
     </inferredMetricsTieBreakers>
 </document>
