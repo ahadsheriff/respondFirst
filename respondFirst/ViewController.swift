@@ -15,7 +15,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        Auth.auth().signInAnonymously() { (user, error) in
+            if let user = user {
+                print("User is signed in with uid: ", user.uid)
+                self.userID = user.uid
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +29,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func anonAuth(_ sender: Any) {
-        Auth.auth().signInAnonymously() { (user, error) in
-            if let user = user {
-                print("User is signed in with uid: ", user.uid)
-                self.userID = user.uid
-            }
-        }
+        
     }
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,10 +41,9 @@ class ViewController: UIViewController {
     }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "needHelpSegue" {
-            let controller = segue.destination as! HelpMapViewController
-            controller.senderID = userID
-        }
+        print(self.userID)
+        let controller = segue.destination as! HelpMapViewController
+        controller.senderID = self.userID
     }
     
     

@@ -62,7 +62,9 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func sendForHelp(_ sender: Any) {
         print("Hello")
-        self.ref.child("users").setValue(["username": uid, "longtitude": locValue.longitude, "latitude": locValue.latitude])
+        let timeStamp = Date()
+        let flag = true;
+        self.ref.child(senderID).setValue(["active": flag, "timeStamp": String(describing: timeStamp), "longtitude": locValue.longitude, "latitude": locValue.latitude])
     }
     
     
