@@ -109,6 +109,7 @@
 				7B4EDBDD2082721600490723 /* Frameworks */,
 				7B4EDBDE2082721600490723 /* Resources */,
 				91A9767B07F348E163D93324 /* [CP] Embed Pods Frameworks */,
+				612B6E70C5F03D4C4D4C76CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +173,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		612B6E70C5F03D4C4D4C76CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-respondFirst/Pods-respondFirst-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F7F119BC321BC73C8A926EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
