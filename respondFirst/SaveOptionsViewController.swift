@@ -45,6 +45,9 @@ class SaveOptionsViewController: UIViewController {
                                 let data = kid.value as? NSDictionary
                                 if let status = data?["active"] as? Bool {
                                     print(status)
+                                    if let long = data?["longitude"] as? Double {
+                                        print(long)
+                                    }
                                 }
                             }
                         }
