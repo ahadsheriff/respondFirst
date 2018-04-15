@@ -20,7 +20,8 @@ class HelpStatusViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var cancelHelp: UIButton!
+    @IBAction func cancelHelp(_ sender: Any) {
+    }
     
     /*
     // MARK: - Navigation
