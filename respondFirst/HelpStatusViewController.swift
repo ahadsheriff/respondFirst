@@ -30,7 +30,7 @@ class HelpStatusViewController: UIViewController {
     
     @IBAction func cancelHelp(_ sender: Any) {
         print("You're trying to cancel")
-        self.ref.child(id).setValue(["active": false])
+        self.ref.child("patient").child(id).setValue(["active": false])
     }
 
     /*
