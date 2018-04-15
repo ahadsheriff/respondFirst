@@ -6,15 +6,24 @@
 //
 
 import UIKit
+import Firebase
 
 class SaveOptionsViewController: UIViewController {
     
     @IBOutlet weak var mySwitch: UISwitch!
     
+    var snap: DataSnapshot!
+    
+    var ref: DatabaseReference = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changeText()
         mySwitch.addTarget(self, action: #selector(switchToggled(_:)), for: UIControlEvents.valueChanged)
+        if mySwitch.isOn {
+            self.ref.child("helper").child(id).setValue(["status": true])
+
+        }
     }
 
     
@@ -25,8 +34,15 @@ class SaveOptionsViewController: UIViewController {
     func changeText() {
         if mySwitch.isOn {
             print("Switch is on")
+            self.ref.child("helper").child(id).setValue(["status": true])
+            /*ref.child("patients").observeSingleEvent(of: .value, with: {(snapshot) in
+                print(snapshot.value!)
+                let value = snapshot.value as? NSDictionary
+                print(value)
+            })*/
         } else {
             print("Switch is off")
+            self.ref.child("helper").child(id).setValue(["status": false])
         }
     }
     
