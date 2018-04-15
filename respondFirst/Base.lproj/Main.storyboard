@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -255,14 +256,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-EO-EBq">
+                                <rect key="frame" x="344" y="666" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Srf-hq-1Hg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <state key="normal" title="ℹ"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="oxc-EO-EBq" firstAttribute="leading" secondItem="ZS9-FP-Wvz" secondAttribute="leading" constant="344" id="45N-uK-nhT"/>
                             <constraint firstItem="9L2-B6-MYd" firstAttribute="top" secondItem="ZS9-FP-Wvz" secondAttribute="top" id="4Iy-Wn-5HS"/>
                             <constraint firstItem="X4C-Y2-HxM" firstAttribute="centerX" secondItem="4ea-z3-wNd" secondAttribute="centerX" id="Eow-qy-aAY"/>
                             <constraint firstItem="9L2-B6-MYd" firstAttribute="leading" secondItem="4ea-z3-wNd" secondAttribute="leading" id="FkM-oE-zzP"/>
+                            <constraint firstItem="oxc-EO-EBq" firstAttribute="trailing" secondItem="4ea-z3-wNd" secondAttribute="trailingMargin" id="Gc9-LA-HoG"/>
                             <constraint firstItem="I1L-gk-d11" firstAttribute="centerX" secondItem="ZS9-FP-Wvz" secondAttribute="centerX" id="MDt-9A-YYA"/>
                             <constraint firstItem="I1L-gk-d11" firstAttribute="top" secondItem="X4C-Y2-HxM" secondAttribute="bottom" constant="8" id="MGR-sm-tS8"/>
+                            <constraint firstAttribute="bottom" secondItem="oxc-EO-EBq" secondAttribute="bottom" constant="20" symbolic="YES" id="Nu5-EW-m0q"/>
                             <constraint firstItem="I1L-gk-d11" firstAttribute="centerY" secondItem="ZS9-FP-Wvz" secondAttribute="centerY" constant="-10" id="Qdp-Ut-OI9"/>
                             <constraint firstItem="X4C-Y2-HxM" firstAttribute="top" secondItem="ZS9-FP-Wvz" secondAttribute="top" constant="95" id="qSf-29-Iyx"/>
                             <constraint firstItem="9L2-B6-MYd" firstAttribute="centerX" secondItem="X4C-Y2-HxM" secondAttribute="centerX" id="yuz-4P-sQM"/>
@@ -275,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH5-ET-81N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.5999999999999" y="493.40329835082463"/>
+            <point key="canvasLocation" x="1165.217391304348" y="493.20652173913049"/>
         </scene>
         <!--Help Map View Controller-->
         <scene sceneID="i8Y-Rf-5Df">
@@ -407,7 +419,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="khN-rH-eHK"/>
         <segue reference="iJc-5O-Xr5"/>
-        <segue reference="l1w-e9-zaB"/>
+        <segue reference="Eev-4z-6eK"/>
     </inferredMetricsTieBreakers>
 </document>
