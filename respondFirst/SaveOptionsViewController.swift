@@ -34,7 +34,7 @@ class SaveOptionsViewController: UIViewController {
     func changeText() {
         if mySwitch.isOn {
             print("Switch is on")
-            self.ref.child("helper").child(id).setValue(["status": true])
+            self.ref.child(id).setValue(["type": "helper", "status": true])
 
             ref.observeSingleEvent(of: .value, with: {(snapshot) in
                 if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
@@ -53,7 +53,7 @@ class SaveOptionsViewController: UIViewController {
             })
         } else {
             print("Switch is off")
-            self.ref.child("helper").child(id).setValue(["status": false])
+            self.ref.child(id).setValue(["status": false])
         }
     }
     

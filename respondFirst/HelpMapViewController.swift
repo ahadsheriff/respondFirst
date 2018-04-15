@@ -62,10 +62,22 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func sendForHelp(_ sender: Any) {
+        
+        
+        
+        
+        print("You're about to update the database")
+        
         let timeStamp = Date()
         let flag = true;
-        print("You're about to update the database")
-        self.ref.child("patient").child(id).setValue(["active": flag, "timeStamp": String(describing: timeStamp), "longtitude": locValue.longitude, "latitude": locValue.latitude])
+        let messageItem = [
+            "active": flag,
+            "type": "patient",
+            "timeStamp": String(describing: timeStamp),
+            "longtitude": locValue.longitude,
+            "latitude": locValue.latitude
+        ] as [String: Any]
+        ref.child(id).setValue(messageItem)
     }
     
     
