@@ -68,14 +68,18 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
         
         print("You're about to update the database")
         
+        let shortLong = Double(round(1000000*locValue.longitude)/1000000)
+        let shortLat = Double(round(1000000*locValue.latitude)/1000000)
+
+        
         let timeStamp = Date()
         let flag = true;
         let messageItem = [
             "active": flag,
             "type": "patient",
             "timeStamp": String(describing: timeStamp),
-            "longtitude": locValue.longitude,
-            "latitude": locValue.latitude
+            "longtitude": shortLong,
+            "latitude": shortLat
         ] as [String: Any]
         ref.child(id).setValue(messageItem)
     }
