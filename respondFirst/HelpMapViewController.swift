@@ -8,8 +8,11 @@
 import UIKit
 import Firebase
 import CoreLocation
+import MapKit
 
 class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
     var locValue = CLLocationCoordinate2D()
@@ -17,6 +20,13 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
     var uid = "greta"
     var ref: DatabaseReference = Database.database().reference()
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let loc: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        //print("locations = \(loc.latitude) \(loc.longitude)")
+        locValue = loc;
+        initialLocation()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +42,15 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestLocation()
             locationManager.startUpdatingLocation()
         }
+        
+        print(locValue.latitude)
+        print(locValue.longitude)
+        
+    }
+    
+    func initialLocation() {
+        let initialLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        centerMapOnLocation(location: initialLocation)
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,12 +63,6 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
         self.ref.child("users").setValue(["username": uid, "longtitude": locValue.longitude, "latitude": locValue.latitude])
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let loc: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        //print("locations = \(loc.latitude) \(loc.longitude)")
-        locValue = loc;
-    }
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error while updating location " + error.localizedDescription)
     }
@@ -59,10 +72,14 @@ class HelpMapViewController: UIViewController, CLLocationManagerDelegate {
         if(manager.location == nil) {
             print("Sorry")
         }else {
-
-        
         }
-        //Do What ever you want with it
+    }
+    
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius, regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
 }
