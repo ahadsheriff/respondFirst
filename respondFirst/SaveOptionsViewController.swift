@@ -35,6 +35,22 @@ class SaveOptionsViewController: UIViewController {
         if mySwitch.isOn {
             print("Switch is on")
             self.ref.child("helper").child(id).setValue(["status": true])
+
+            ref.observeSingleEvent(of: .value, with: {(snapshot) in
+                if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                    for child in snapshots {
+                        if let children = child.children.allObjects as? [DataSnapshot] {
+                            for kid in children {
+                                print("Kid :", kid)
+                                let data = kid.value as? NSDictionary
+                                if let status = data?["active"] as? Bool {
+                                    print(status)
+                                }
+                            }
+                        }
+                    }
+                }
+            })
         } else {
             print("Switch is off")
             self.ref.child("helper").child(id).setValue(["status": false])
