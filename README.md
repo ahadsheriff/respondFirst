@@ -1,5 +1,7 @@
 # respondFirst
-First responders at the tap of a button!
+WINNER OF COLUMBIA UNIVERSITY HEALTH HACKS 2018
+
+Dispatch first responders at the tap of a buttoN.
 
 [Click Here](https://devpost.com/software/respond-first-lzde25) to view our project on Devpost.
 
